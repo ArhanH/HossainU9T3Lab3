@@ -21,6 +21,10 @@ public class Comedian extends Performer {
     // instead of printing "I am calling my agent! Siri, dial 646-555-5555"
     // it prints: "Let me run this new joke past my agent! Siri, dial 646-555-5555"
     // Then uncomment test code for Exercise 2 in Main.java and test
+    @Override
+    public void callAgent() {
+        System.out.println("Let me run this new joke past my agent! Siri, dial " + getAgent().getCellPhoneNum());
+    }
 
 
 
@@ -43,6 +47,12 @@ public class Comedian extends Performer {
     // the Exercise 4 test code in Main.java prints:
     // "Performing for an audience! Performance #1"
     // followed by EACH joke on a NEW line
+    public void perform() {
+        System.out.println("Performing for an audience! Performance #1");
+        for (String joke : jokes){
+            System.out.println(joke);
+        }
+    }
 
 
 
